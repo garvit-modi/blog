@@ -3,6 +3,7 @@ package com.springboot.blog.entity
 import jakarta.persistence.*
 import java.util.HashSet
 
+
 @Entity
 @Table(name = "posts")
 data class Post(
@@ -31,4 +32,4 @@ data class Post(
     @JoinColumn(name = "category_id")
     val category: Category? = null
 
-) 
+) : Auditable()
